@@ -1,5 +1,7 @@
 Change Log
 --------
+v0.1.24
+- Remove clearing of validation errors after clearing input with empty value caused inconsistency in validity state
 
 v0.1.23
  - added `allow-same-file` attribute option, which fixes #103 and #108

@@ -63,8 +63,8 @@ describe('Clear input', function() {
       expect(directive.$scope.file).toBeFalsy();
     })
 
-    it('should clear validation errors', function() {
-      expect(directive.$scope.form.myinput.$error.maxsize).toBeFalsy()
+    it('should not clear validation errors', function() {
+      expect(directive.$scope.form.myinput.$error.maxsize).toBeTruthy()
       expect(directive.$scope.form.myinput.$error.required).toBeTruthy()
       expect(directive.$scope.form.myinput.$dirty).toBeTruthy()
     })
@@ -92,10 +92,10 @@ describe('Clear input', function() {
       expect(spy).toHaveBeenCalled();
     });
 
-    it('should clear validation errors', function() {
+    it('should not clear validation errors', function() {
       directive.$scope.file = null
       $ROOTSCOPE.$apply();
-      expect(directive.$scope.form.myinput.$error.maxsize).toBeFalsy()
+      expect(directive.$scope.form.myinput.$error.maxsize).toBeTruthy()
       expect(directive.$scope.form.myinput.$error.required).toBeTruthy()
       expect(directive.$scope.form.myinput.$dirty).toBeTruthy()
     })

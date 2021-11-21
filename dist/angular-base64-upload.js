@@ -1,6 +1,6 @@
-/*! angular-base64-upload - v0.1.23
+/*! angular-base64-upload - v0.1.24
 * https://github.com/adonespitogo/angular-base64-upload
-* Copyright (c) Adones Pitogo <pitogo.adones@gmail.com> [Sat Aug 05 2017]
+* Copyright (c) Adones Pitogo <pitogo.adones@gmail.com> [Sun Nov 21 2021]
 * Licensed MIT */
 (function(window, undefined) {
 
@@ -284,12 +284,6 @@
           }, function(val) {
             if (ngModel.$isEmpty(val) && ngModel.$dirty) {
               scope._clearInput();
-              // Remove validation errors
-              ngModel.$setValidity('maxnum', true);
-              ngModel.$setValidity('minnum', true);
-              ngModel.$setValidity('maxsize', true);
-              ngModel.$setValidity('minsize', true);
-              ngModel.$setValidity('accept', true);
             }
           });
 
